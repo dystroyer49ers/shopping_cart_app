@@ -8,7 +8,10 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "vue": "^2.6.6"
+    "axios": "^0.18.0",
+    "bulma": "^0.7.4",
+    "vue": "^2.6.6",
+    "vuex": "^3.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",
@@ -17,7 +20,39 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.5.21"
+    "vue-template-compiler": "^2.5.21",
+    "autoprefixer": "",
+    "babel-core": "",
+    "babel-loader": "",
+    "babel-plugin-transform-runtime": "",
+    "babel-preset-env": "",
+    "babel-preset-stage-2": "",
+    "babel-register": "",
+    "chalk": "",
+    "concurrently": "",
+    "copy-webpack-plugin": "",
+    "css-loader": "",
+    "eventsource-polyfill": "",
+    "express": "",
+    "extract-text-webpack-plugin": "",
+    "file-loader": "",
+    "friendly-errors-webpack-plugin": "",
+    "html-webpack-plugin": "",
+    "node-notifier": "",
+    "optimize-css-assets-webpack-plugin": "",
+    "ora": "",
+    "portfinder": "",
+    "postcss-loader": "",
+    "rimraf": "",
+    "semver": "",
+    "shelljs": "",
+    "url-loader": "",
+    "vue-loader": "",
+    "vue-style-loader": "",
+    "webpack": "",
+    "webpack-bundle-analyzer": "",
+    "webpack-dev-server": "",
+    "webpack-merge": ""
   },
   "eslintConfig": {
     "root": true,
