@@ -2,36 +2,36 @@
   "name": "shopping_cart_app",
   "version": "0.1.0",
   "private": true,
+  "author": "Zachary Koyama",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "client": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "server": "node server",
+    "start": "concurrently \"npm run server\" \"npm run client\""
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.1",
     "axios": "^0.18.0",
     "bulma": "^0.7.4",
     "vue": "^2.6.6",
     "vuex": "^3.1.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.5.0",
-    "@vue/cli-plugin-eslint": "^3.5.0",
-    "@vue/cli-service": "^3.5.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.8.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.5.21",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@vue/babel-preset-app": "^3.5.1",
+    "@vue/cli-plugin-babel": "^3.5.1",
     "autoprefixer": "^9.5.0",
-    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "8.0.5",
     "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.7.0",
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.26.0",
     "chalk": "^2.4.2",
     "concurrently": "^4.1.0",
     "copy-webpack-plugin": "^5.0.2",
     "css-loader": "^2.1.1",
+    "eslint": "^5.15.3",
+    "eslint-plugin-vue": "^5.2.2",
     "eventsource-polyfill": "0.9.6",
     "express": "4.16.4",
     "extract-text-webpack-plugin": "3.0.2",
@@ -49,8 +49,10 @@
     "url-loader": "^1.1.2",
     "vue-loader": "^15.7.0",
     "vue-style-loader": "^4.1.2",
-    "webpack": "^4.29.4",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.29.6",
     "webpack-bundle-analyzer": "^3.1.0",
+    "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1",
     "webpack-merge": "^4.2.1"
   },
@@ -63,7 +65,6 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
     }
