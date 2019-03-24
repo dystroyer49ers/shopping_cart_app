@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 const express = require('express');
-const bodyPhraser = require('body-parser');
+const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
 
@@ -9,10 +9,10 @@ const app = express();
 const PRODUCT_DATA_FILE = path.join(__dirname, 'server-product-data.json');
 const CART_DATA_FILE = path.join(__dirname, 'server-cart-data.json');
 
-app.use('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 3000));
 
-app.use(bodyPhraser.json());
-app.use(bodyPhraser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use((req, res, next) => {
   res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
@@ -84,5 +84,3 @@ app.post('/cart/delete/all', (req, res) => {
 app.listen(app.get('port'), () => {
   console.log(`Find the server at: http://localhost:${app.get('port')}/`); // eslint-disable-line no-console
 });
-
-// module.exports = router;
